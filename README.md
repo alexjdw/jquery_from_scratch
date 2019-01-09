@@ -23,7 +23,7 @@ getClass
 getID
 ```
 
-These correspond to the document.getElement(s)By____ methods. Each one adds a single DOMobj to a list, DOM_OBJECT_MANAGER.objects, and then returns the manager for method chaining purposes. The DOMobj methods are re-implemented as loops that simply call the DOMobj method on each DOMobj in the DOMobj list. This allows us to avoid lots of nested code by tucking away our for loops in the manager class.
+These correspond to the document.getElement(s)By____ methods. Each one adds a single DOMobj to a list, DOM_OBJECT_MANAGER.objects, and then returns the manager for method chaining purposes. The DOMobj methods are re-implemented as loops that simply call the DOMobj method on each DOMobj in the .objects list. This allows us to avoid lots of nested code later on by tucking away our for loops in the manager class.
 
 Finally, a function named $DOM is created that returns a DOM_OBJECT_MANAGER and takes any number of strings as arguments. Strings can be regular strings, start with "." to indicate a class, or start with "#" to indicate an ID. (Composite strings aren't supported). It returns a manager with the requested elements added to the .objects list. (You could add this logic to the manager's constructer if you like instead.)
 
